@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Reference Website: [HD Today](https://hdtoday.ru/)
+
 ## Available Scripts
 
 In the project directory, you can run:
