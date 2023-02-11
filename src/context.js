@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-const API_URL = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=action`;
+const API_URL = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}`;
 
 const AppContext = React.createContext();
 
@@ -8,6 +8,7 @@ const AppProvider = ({ children }) => {
   const [IsLoading, setIsLoading] = useState(true)
   const [Movies, setMovies] = useState([])
   const[IsError,  setIsError] = useState({show: "False", msg: ""})
+  const[search, setSearch] = useState("Avengers")
 
   const getMovies = async (url) => {
     try {
@@ -30,12 +31,12 @@ const AppProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    getMovies(API_URL);
-  }, []);
+    getMovies(`${API_URL}&s=${search}`);
+  }, [search]);
 
   return (
     // The data set in the "value" is what going to be shown in the page 
-    <AppContext.Provider value={{IsLoading, IsError, Movies}}>
+    <AppContext.Provider value={{IsLoading, IsError, Movies, search, setSearch}}>
       {children}
       {/*Writing "children as the object is necessary no other name"*/}
     </AppContext.Provider>

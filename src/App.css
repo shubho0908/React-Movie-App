@@ -99,6 +99,9 @@ h2{
 .search-section {
   margin: auto;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 4rem 0;
 }
 
@@ -221,6 +224,11 @@ a:hover h2 {
 .back-btn {
   padding: 1.2rem 3.6rem;
 }
+
+.search-head{
+  max-width: 100%;
+  font-size: 18px;
+  }
 
 .hd-tag{
   background-color: #ffffffef;
