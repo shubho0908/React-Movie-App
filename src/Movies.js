@@ -7,11 +7,11 @@ const Movies = () => {
   return (
     <>
       <div className="movie-page">
-        <div className="grid grid-4-col">
+        <div className="container grid grid-4-col">
         {Movies.map((element) => {
         return (
-          <NavLink to={`movie/${element.imdbID}`}>
-          <div className="card">
+          <NavLink to={`movie/${element.imdbID}`} key={element.imdbID}>
+          <div className="card" >
             <div className="card-info">
               <h2>{element.Title}</h2>
               <img src={element.Poster} alt={element.Title + "'s poster"} />
