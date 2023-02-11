@@ -1,0 +1,86 @@
+.container{
+    font-size: 16px;
+}
+
+.movie-poster{
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.details-card, .rating-data{
+    display: flex;
+}
+
+.details-card{
+    margin-top: 150px;
+}
+
+.movies-data{
+    margin-left: 35px;
+}
+
+.title-heading{
+    max-width: 100%;
+    font-size: 42px;
+    margin-top: 0px;
+}
+
+.rating-data>div{
+    margin-left: 25px;
+}
+
+.HD-tag{
+    background-color: rgb(3, 130, 214);
+    width: 50px;
+    text-align: center;
+    border-radius: 8px;
+}
+.rated{
+    width: 20px;
+    margin-right: 10px;
+}
+.rating-data{
+    margin-top: 10px;
+
+}
+.rating{
+    display: flex;
+    align-items: center;
+}
+
+.rest-data{
+    margin-top: 36px;
+}
+
+.other-data{
+    margin-top: 30px;
+}
+
+.back{
+    cursor: pointer;
+    background-color: #028b02;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.inside-back{
+    background-color: #ffffff00;
+}
+
+@media (max-width: 660px) {
+    .details-card{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0px
+    }
+
+    .movie-poster{
+        width: 230px;
+    }
+
+    .movies-data{
+        margin-top: 30px;
+    }
+}

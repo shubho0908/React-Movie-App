@@ -153,6 +153,7 @@ input {
   font-size: 3.2rem;
   color: var(--text-clr);
   text-align: center;
+  margin-top: 100px;
 }
 
 .movie-section .loading {
@@ -208,7 +209,7 @@ figure {
   font-size: 1.8rem;
 }
 
-a {
+a:not(.inside-back) {
   text-align: center;
   display: flex;
   justify-content: center;

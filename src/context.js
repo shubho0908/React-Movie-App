@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-const API_URL = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}`;
+export const API_URL = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}`;
 
 const AppContext = React.createContext();
 
@@ -62,4 +62,4 @@ const GlobalContext = () => {
   return useContext(AppContext);
 };
 
-export { AppContext, AppProvider, GlobalContext };
+export { AppContext, AppProvider, GlobalContext};
