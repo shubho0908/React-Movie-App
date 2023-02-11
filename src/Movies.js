@@ -13,8 +13,8 @@ const Movies = () => {
           <NavLink to={`movie/${element.imdbID}`} key={element.imdbID}>
           <div className="card" >
             <div className="card-info">
-              <h2>{element.Title}</h2>
-              <img src={element.Poster} alt={element.Title + "'s poster"} />
+              <img className="poster" src={element.Poster} alt={element.Title + "'s poster"} />
+              <h2>{(element.Title).length <= 30 ? (element.Title) : (element.Title.slice(0, 30) + "..")}</h2>
             </div>
           </div>
           </NavLink>
