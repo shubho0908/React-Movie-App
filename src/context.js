@@ -1,14 +1,29 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 const API_URL = `http://www.omdbapi.com/?apikey=20d09b0a&s=pathaan`;
 
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
+
+  const [IsLoading, setIsLoading] = useState(true)
+  const [Movies, setMovies] = useState([])
+  const[IsError,  setIsError] = useState({show: "False", msg: ""})
+
   const getMovies = async (url) => {
     try {
       const res = await fetch(url);
       const data = await res.json();
       console.log(data);
+      if (data.Response === "True") {
+        setIsLoading(false)
+        setMovies(data.Search)
+      }
+      else{
+        setIsError({
+          show:true,
+          msg:data.error
+        })
+      }
     } catch (error) {
       console.log(error);
     }
@@ -19,7 +34,8 @@ const AppProvider = ({ children }) => {
   }, []);
 
   return (
-    <AppContext.Provider value="Shubho">
+    // The data set in the "value" is what going to be shown in the page 
+    <AppContext.Provider value={{IsLoading, IsError, Movies}}>
       {children}
       {/*Writing "children as the object is necessary no other name"*/}
     </AppContext.Provider>
