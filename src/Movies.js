@@ -9,6 +9,7 @@ const Movies = () => {
       <div className="movie-page">
         <div className="container grid grid-4-col">
           {Movies.map((element) => {
+            const MovieTitle = (element.Title).substring(0, 15)
             return (
               <NavLink to={`movie/${element.imdbID}`} key={element.imdbID}>
                 <div className="card">
@@ -17,13 +18,13 @@ const Movies = () => {
                     <img
                       className="poster"
                       src={element.Poster}
-                      alt={element.Title + "'s poster"}
+                      alt={MovieTitle + "'s poster"}
                     />
                     <div className="about-movie">
                       <h2>
-                        {element.Title.length <= 20
-                          ? element.Title
-                          : element.Title.slice(0, 20) + ".."}
+                        {MovieTitle.length >= 15
+                          ? `${MovieTitle}...`
+                          : MovieTitle}
                       </h2>
                       <h2 className="type">{element.Type}</h2>
                     </div>
