@@ -14,7 +14,6 @@ const AppProvider = ({ children }) => {
       setIsLoading(true)
       const res = await fetch(url);
       const data = await res.json();
-      // console.log(data);
       if (data.Response === "True") {
         setIsLoading(false);
         setMovies(data.Search);
@@ -22,7 +21,6 @@ const AppProvider = ({ children }) => {
           show: false,
           msg: null,
         });
-        console.log(data);
 
       } else {
         setIsError({
