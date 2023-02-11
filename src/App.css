@@ -1,4 +1,4 @@
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -40,17 +40,17 @@ a {
   height: 350px;
   margin: 1rem 0;
   margin-top: 15px;
-  border-radius: .8rem;
+  border-radius: 0.8rem;
   transition: all 0.3s linear;
 }
 
-.about-movie{
+.about-movie {
   /* border: 2px solid white; */
   display: flex;
   justify-content: space-between;
 }
 
-.type{
+.type {
   font-weight: 100;
   font-size: 13px;
   color: #319ffd;
@@ -89,7 +89,7 @@ a {
   align-items: center;
 }
 
-h2{
+h2 {
   color: white;
   font-weight: 500;
   max-width: 160px;
@@ -216,21 +216,28 @@ a:hover h2 {
   display: inline-block;
 }
 
+.results {
+  font-weight: 100;
+  font-size: 22px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
 .poster:hover {
   transform: scale(1.03);
-  opacity: .55;
+  opacity: 0.55;
 }
 
 .back-btn {
   padding: 1.2rem 3.6rem;
 }
 
-.search-head{
+.search-head {
   max-width: 100%;
   font-size: 18px;
-  }
+}
 
-.hd-tag{
+.hd-tag {
   background-color: #ffffffef;
   color: black;
   width: 17%;
@@ -240,7 +247,6 @@ a:hover h2 {
   left: 182px;
   font-size: 15px;
 }
-
 
 /* responsive code   */
 @media (max-width: 1260px) {

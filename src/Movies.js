@@ -3,10 +3,12 @@ import { NavLink } from "react-router-dom";
 import { GlobalContext } from "./context";
 
 const Movies = () => {
-  const { Movies } = GlobalContext(); //The variables name should be as same the Hook, e.g. "Movies"
+  const { Movies, search } = GlobalContext(); //The variables name should be as same the Hook, e.g. "Movies"
+ 
   return (
     <>
       <div className="movie-page">
+        <h3 className="results">Results for <u>{search}</u></h3>
         <div className="container grid grid-4-col">
           {Movies.map((element) => {
             const MovieTitle = (element.Title).substring(0, 15)

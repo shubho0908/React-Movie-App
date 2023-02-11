@@ -4,26 +4,25 @@ const API_URL = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-
-  const [IsLoading, setIsLoading] = useState(true)
-  const [Movies, setMovies] = useState([])
-  const[IsError,  setIsError] = useState({show: "False", msg: ""})
-  const[search, setSearch] = useState("Avengers")
+  const [IsLoading, setIsLoading] = useState(true);
+  const [Movies, setMovies] = useState([]);
+  const [IsError, setIsError] = useState({ show: "False", msg: "" });
+  const [search, setSearch] = useState("Avengers");
 
   const getMovies = async (url) => {
     try {
       const res = await fetch(url);
       const data = await res.json();
-      console.log(data);
+      // console.log(data);
       if (data.Response === "True") {
-        setIsLoading(false)
-        setMovies(data.Search)
-      }
-      else{
+        setIsLoading(false);
+        setMovies(data.Search);
+        console.log(data);
+      } else {
         setIsError({
-          show:true,
-          msg:data.error
-        })
+          show: true,
+          msg: data.error,
+        });
       }
     } catch (error) {
       console.log(error);
@@ -31,12 +30,20 @@ const AppProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    getMovies(`${API_URL}&s=${search}`);
+    let TimeOut = setTimeout(() => {
+      getMovies(`${API_URL}&s=${search}`);
+    }, 750);
+
+    // clearTimeout function basically clears the timer set with SetTimOut()
+    //Used it avoid multiple API request for each and every letter
+    return()=> clearTimeout(TimeOut)
   }, [search]);
 
   return (
-    // The data set in the "value" is what going to be shown in the page 
-    <AppContext.Provider value={{IsLoading, IsError, Movies, search, setSearch}}>
+    // The data set in the "value" is what going to be shown in the page
+    <AppContext.Provider
+      value={{ IsLoading, IsError, Movies, search, setSearch }}
+    >
       {children}
       {/*Writing "children as the object is necessary no other name"*/}
     </AppContext.Provider>
