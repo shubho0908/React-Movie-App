@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 import Home from "./Home";
 import DetailPage from "./DetailPage";
 import Error from "./Error";
