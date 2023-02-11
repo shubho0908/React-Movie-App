@@ -1,9 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500&family=Lora:wght@400;500&family=Poppins:wght@400;600&display=swap");
-
-/* plz subsribe to thapa technical channel 
-          https://www.youtube.com/thapatechnical
-         */
-
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -28,11 +23,12 @@ body {
 }
 
 h2 {
-  font-family: "Lora", serif;
+  font-family: "Poppins", sans-serif;
   color: var(--text-clr);
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   margin-top: 10px;
   transition: all 0.5s linear;
+  text-align: left;
 }
 
 a {
@@ -40,12 +36,28 @@ a {
 }
 
 .poster {
-  width: 270px;
-  height: 413px;
+  width: 238px;
+  height: 350px;
   margin: 1rem 0;
   margin-top: 15px;
   border-radius: .8rem;
   transition: all 0.3s linear;
+}
+
+.about-movie{
+  /* border: 2px solid white; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.type{
+  font-weight: 100;
+  font-size: 13px;
+  color: #319ffd;
+  height: 30px;
+  padding: 4px;
+  border-radius: 5px;
+  border: 1.1px solid #319ffd;
 }
 
 /* resuable code  */
@@ -58,11 +70,11 @@ a {
 .grid {
   /* width: 100%; */
   display: grid;
-  gap: .8rem;
+  gap: 1.2rem;
 }
 
 .grid-4-col {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .card {
@@ -79,6 +91,8 @@ a {
 
 h2{
   color: white;
+  font-weight: 500;
+  max-width: 160px;
 }
 
 /* search css  */
@@ -181,8 +195,8 @@ a {
   text-align: center;
   display: flex;
   justify-content: center;
-  margin-top: 4.4rem;
-  padding: 3.2rem 1rem;
+  margin-top: -1.6rem;
+  padding: 3.9rem 1rem;
   /* background-color: var(--text-clr); */
   color: var(--text-clr);
   font-size: 1.8rem;
@@ -208,25 +222,36 @@ a:hover h2 {
   padding: 1.2rem 3.6rem;
 }
 
+.hd-tag{
+  background-color: #ffffffc7;
+  color: black;
+  width: 17%;
+  position: relative;
+  border-radius: 4px;
+  top: 53px;
+  left: 182px;
+  font-size: 15px;
+}
+
 
 /* responsive code   */
-@media (max-width: 1200px) {
+@media (max-width: 1260px) {
   .container {
     margin: auto;
-    max-width: 110rem;
+    max-width: 114rem;
   }
   .grid-4-col {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
-@media (max-width: 998px) {
+@media (max-width: 1060px) {
   .container {
     max-width: 90rem;
     margin: auto;
   }
   .grid-4-col {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   input {
@@ -251,7 +276,17 @@ a:hover h2 {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
+  .container {
+    max-width: 70rem;
+    margin: auto;
+  }
+  .grid-4-col {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 558px) {
   .container {
     max-width: 70rem;
     margin: auto;
