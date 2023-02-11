@@ -1,24 +1,26 @@
 import React from "react";
 import { GlobalContext } from "./context";
+import SearchImg from './searchImg.png'
 
 const Search = () => {
   const { search, setSearch, IsError } = GlobalContext();
   return (
     <div className="search-section">
-      <h2 className="search-head">Search your favorite movie 🔎</h2>
+      <h2 className="search-head">Search Your Favorite Movie</h2>
       <form
         action=""
         onSubmit={(e) => {
           e.preventDefault();
         }}
       >
-        <div>
+        <div className="UpInput">
           <input
             type="text"
-            placeholder="Avengers"
+            placeholder="search movie"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
+          <img className="searchImg" src={SearchImg} alt="SearchImg" />
         </div>
       </form>
       <div className="card-error">

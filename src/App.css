@@ -44,6 +44,20 @@ a {
   transition: all 0.3s linear;
 }
 
+.UpInput{
+  position: relative;
+  left: 16px;
+}
+
+.searchImg{
+  width: 24px;
+    position: relative;
+    top: 5px;
+    right: 41px;
+    background-color: #ffffff00;
+    opacity: .62;
+}
+
 .about-movie {
   /* border: 2px solid white; */
   display: flex;

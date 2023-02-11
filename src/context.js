@@ -11,17 +11,23 @@ const AppProvider = ({ children }) => {
 
   const getMovies = async (url) => {
     try {
+      setIsLoading(true)
       const res = await fetch(url);
       const data = await res.json();
       // console.log(data);
       if (data.Response === "True") {
         setIsLoading(false);
         setMovies(data.Search);
+        setIsError({
+          show: false,
+          msg: null,
+        });
         console.log(data);
+
       } else {
         setIsError({
           show: true,
-          msg: data.error,
+          msg: data.Error,
         });
       }
     } catch (error) {
@@ -32,7 +38,7 @@ const AppProvider = ({ children }) => {
   useEffect(() => {
     let TimeOut = setTimeout(() => {
       getMovies(`${API_URL}&s=${search}`);
-    }, 750);
+    }, 580);
 
     // clearTimeout function basically clears the timer set with SetTimOut()
     //Used it avoid multiple API request for each and every letter
