@@ -5,6 +5,7 @@
 .movie-poster{
     border: 2px solid white;
     border-radius: 10px;
+    height: 440px;
 }
 
 .details-card, .rating-data{
@@ -12,7 +13,8 @@
 }
 
 .details-card{
-    margin-top: 150px;
+    margin-top: 150px !important;
+    align-items: center !important;
 }
 
 .movies-data{
@@ -73,14 +75,21 @@
     .details-card{
         flex-direction: column;
         align-items: center;
-        margin-top: 0px
+        margin-top: 0px !important
     }
 
     .movie-poster{
         width: 230px;
+        height: 340px;
     }
 
     .movies-data{
         margin-top: 30px;
     }
+}
+
+@media (max-width: 800px) {
+.details-card{
+    margin-top: 70px !important;
+}
 }

@@ -6,7 +6,6 @@ import ratingImg from './ratingImg.png'
 
 const DetailPage = () => {
   const { id } = useParams();
-  // const [IsError, setIsError] = useState({ show: "False", msg: "" });
   const [IsLoading, setIsLoading] = useState(true);
   const [Movies, setMovies] = useState("");
 
@@ -15,11 +14,9 @@ const DetailPage = () => {
       setIsLoading(true);
       const res = await fetch(url);
       const data = await res.json();
-      // console.log(data);
       if (data.Response === "True") {
         setIsLoading(false);
         setMovies(data);
-        console.log(data);
       } 
     } catch (error) {
       console.log(error);
@@ -28,6 +25,7 @@ const DetailPage = () => {
 
   useEffect(() => {
     let TimeOut = setTimeout(() => {
+      // "i" for id & "s" for search
       getMovies(`${API_URL}&i=${id}`);
     }, 400);
 
