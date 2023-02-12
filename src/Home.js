@@ -1,11 +1,11 @@
 import React from "react";
 import Movies from "./Movies";
-import Search from './Search'
+import Navbar from "./Navbar";
 
 const Home = () => {
   return (
     <>
-    <Search/>
+    <Navbar/>
     <Movies/>
     </>
   );

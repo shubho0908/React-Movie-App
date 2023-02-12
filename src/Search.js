@@ -6,7 +6,6 @@ const Search = () => {
   const { search, setSearch, IsError } = GlobalContext();
   return (
     <div className="search-section">
-      <h2 className="search-head">Search Your Favorite Movie</h2>
       <form
         action=""
         onSubmit={(e) => {

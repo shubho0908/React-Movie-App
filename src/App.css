@@ -8,7 +8,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  background-color: #002244;
+  background-color: #001427;
   color: white;
 }
 
@@ -51,6 +51,7 @@ a {
 .UpInput{
   position: relative;
   left: 10px;
+  opacity: .7;
 }
 
 .searchImg{
