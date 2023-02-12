@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { GlobalContext } from "./context";
+import Footer from "./Footer";
 import errorimg from './error-img.jpg'
 
 const Movies = () => {
@@ -17,7 +18,7 @@ const Movies = () => {
     <>
       <div className="movie-page">
         <h3 className="results">
-          Results for <u>{search}</u>
+          Results for <b><u><em>{search}</em></u></b>
         </h3>
         <div className="container grid grid-4-col">
           {Movies.map((element) => {
@@ -47,6 +48,7 @@ const Movies = () => {
           })}
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

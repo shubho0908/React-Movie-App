@@ -218,7 +218,7 @@ figure {
   font-size: 1.8rem;
 }
 
-a:not(.inside-back) {
+a:not(.inside-back, .social-img) {
   text-align: center;
   display: flex;
   justify-content: center;
