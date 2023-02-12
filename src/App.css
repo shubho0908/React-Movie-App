@@ -161,6 +161,10 @@ input {
   margin-top: 100px;
 }
 
+.movie-page{
+  margin-top: 40px;
+}
+
 .movie-section .loading {
   font-size: 3.2rem;
   color: var(--bg-clr);

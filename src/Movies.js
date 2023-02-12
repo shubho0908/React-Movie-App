@@ -5,7 +5,6 @@ import errorimg from './error-img.jpg'
 
 const Movies = () => {
   const { Movies, search,IsLoading, IsError } = GlobalContext(); //The variables name should be as same the Hook, e.g. "Movies"
-
   if (IsLoading) {
     return (
       <div>

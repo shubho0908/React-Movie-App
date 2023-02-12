@@ -69,6 +69,9 @@ const DetailPage = () => {
         <button className="back"><Link className="inside-back" to="/">&larr; Go back</Link></button>
         </div>
       </div>
+      <div className="container comments">
+        Hello
+      </div>
     </>
   );
 };

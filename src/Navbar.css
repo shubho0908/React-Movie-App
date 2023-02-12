@@ -1,6 +1,52 @@
 .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.main-logo{
+    cursor: pointer;
+}
+
+.user-img{
+    width: 40px;
+    filter: invert(1);
+    background-color: #ffffff00;
+}
+
+.authentication{
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+}
+
+.user-logo{
+    display: flex;
+    align-items: center;
+}
+
+
+.logout{
+    cursor: pointer;
+    background-color: #319ffd;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+@media (max-width: 660px) {
+    .navbar{
+        flex-direction: column;
+    }
+    .search-section{
+        margin: 0px;
+    }
+    .authentication{
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .movie-page{
+        margin-top: 30px;
+    }
 }
