@@ -4,6 +4,7 @@ import { API_URL } from "./context";
 import "./DetailPage.css";
 import ratingImg from "./ratingImg.png";
 import Comments from "./Comments";
+import mainLogo from './main-logo.png'
 
 const DetailPage = () => {
   const { id } = useParams();
@@ -40,6 +41,10 @@ const DetailPage = () => {
       </div>
     );
   }
+
+  const favicon = document.getElementById("favicon");
+  favicon.setAttribute("href", `${mainLogo}`);
+  document.title = `Movie HD - ${Movies.Title}`
 
   return (
     <>

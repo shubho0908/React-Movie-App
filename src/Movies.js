@@ -14,6 +14,9 @@ const Movies = () => {
     );
   }
 
+  document.title = `Movie HD`
+
+
   return (
     <>
       <div className="movie-page">
