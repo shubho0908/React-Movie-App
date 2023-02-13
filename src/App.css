@@ -239,7 +239,12 @@ a:not(.inside-back, .social-img, .top) {
   padding: 5px;
   border-radius: 6px;
   bottom: 40px;
+  transition: all .2s;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.uparr:hover{
+  transform: scale(1.06);
 }
 
 .up-arrow{
