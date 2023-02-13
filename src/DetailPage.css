@@ -6,6 +6,7 @@
     border: 2px solid white;
     border-radius: 10px;
     height: 440px;
+    width: 300px;
 }
 
 .details-card, .rating-data{

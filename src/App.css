@@ -67,6 +67,7 @@ a {
   /* border: 2px solid white; */
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .type {
@@ -204,6 +205,19 @@ figure {
   font-size: 2.8rem;
   color: var(--text-clr);
   font-weight: bold;
+}
+
+.mv-year{
+  font-size: 16px;
+  font-weight: 100;
+  font-family: system-ui;
+}
+
+.mv-data{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: baseline;
 }
 
 .card-content {
