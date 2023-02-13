@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <>
-    <div className="navbar">
+    <div className="navbar" id='navbar'>
         <div className="main-logo">
             <img onClick={()=>{
                 window.location.reload()
@@ -40,6 +40,11 @@ const Navbar = () => {
           <p style={{marginLeft:"13px", fontSize:"14px"}}>Login/Signup</p> */}
         </div>
         {/* <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Logout</button> */}
+    </div>
+    <div className="up-arrow">
+      <div className="uparr">
+        <a className='top' href="#navbar">&uarr;</a>
+      </div>
     </div>
     </>
   )

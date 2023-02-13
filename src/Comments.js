@@ -20,7 +20,7 @@ const Comments = () => {
                 <div className="time-text">6 hours ago</div>
               </div>
               </div>
-              <div className="UserComment">Wow, I just watched this film and I have to say it was incredible! The storytelling was so well-crafted, with complex characters and thought-provoking themes that kept me engaged from start to finish. The acting was also top-notch, bringing a sense of authenticity to the story. I highly recommend this movie to anyone looking for a compelling and insightful film.</div>
+              <div className="UserComment">Wow, I just watched this film and I have to say it was incredible! The storytelling was so well-crafted, with complex characters and thought-provoking themes that kept me engaged from start to finish.</div>
             </div>
           </div>
         </div>

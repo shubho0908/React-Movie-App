@@ -218,7 +218,7 @@ figure {
   font-size: 1.8rem;
 }
 
-a:not(.inside-back, .social-img) {
+a:not(.inside-back, .social-img, .top) {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -228,6 +228,34 @@ a:not(.inside-back, .social-img) {
   color: var(--text-clr);
   font-size: 1.8rem;
   transition: all 0.3s linear;
+}
+
+.uparr{
+  position: fixed;
+  text-align: center;
+  background-color: #00abff;
+  width:40px;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 6px;
+  bottom: 40px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.up-arrow{
+  z-index: 5;
+  cursor: pointer;
+  width: 97%;
+  height: 21vh;
+  display: flex;
+  justify-content: right;
+  position: fixed;
+  top: 620px;
+  background-color: #ffffff00;
+}
+
+.top{
+  background-color: #ffffff00;
 }
 
 a:hover {

@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 .navbar{
     display: flex;
     align-items: center;
@@ -76,6 +80,8 @@
     transition: all 0.3s;
 }
 
+
+
 .social-img>img:hover{
     transform: scale(1.18);
 }
@@ -92,6 +98,13 @@
     .authentication{
         margin-top: 25px;
         margin-bottom: 25px;
+    }
+
+    .user-data{
+        margin-right: 20px;
+    }
+    .movies-data{
+        margin-left: 0px !important;
     }
 
     .movie-page{
