@@ -173,3 +173,37 @@
     margin-top: 40px !important;
 }
 }
+
+/* ANIMATIONS */
+
+.details-card{
+    animation: fadedetails 1.2s;
+}
+
+@keyframes fadedetails {
+
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+.comments{
+    animation: fadecomments 1.4s;
+}
+
+@keyframes fadecomments {
+
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+    
+}

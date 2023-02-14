@@ -382,3 +382,23 @@ a:hover h2 {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ANIMATIONS  */
+
+
+.movie-page{
+  animation: fademovie 1.5s;
+}
+
+@keyframes fademovie {
+
+  0%{
+      opacity: 0;
+  }
+
+  100%{
+      opacity: 1;
+  }
+  
+}

@@ -111,3 +111,53 @@ html{
         margin-top: 30px;
     }
 }
+
+/* ANIMATIONS */
+
+.navbar{
+    animation: fadenav 0.8s;
+}
+
+@keyframes fadenav {
+
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+.up-arrow{
+    animation: fadearr 0.8s;
+}
+
+@keyframes fadearr {
+
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+.footer{
+    animation: fadefooter 0.8s;
+}
+
+@keyframes fadefooter {
+
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+    
+}
